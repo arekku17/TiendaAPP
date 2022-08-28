@@ -2,7 +2,6 @@
     width: 90%;
     margin: auto;
     margin-top: 100px;
-    
 }
 
 .grid-container{
@@ -13,7 +12,7 @@
 }
 
 .grid-container div {
-    margin: 20px;
+    margin: auto;
 }
 
 .all{
