@@ -20,6 +20,7 @@
 .img-item{
     width: 230px;
     height: 200px;
+    position: relative;
 }
 
 .item-container img{
@@ -39,11 +40,10 @@
 
 .hover-container{
     background-image: linear-gradient(rgba(37, 35, 35, 0.637), rgba(37, 35, 35, 0.637));
-    width: 230px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 0;
     opacity: 0;
     transition: all .3s ease-in-out;
 }

@@ -1,4 +1,4 @@
-.pag-container{
+.pagination{
     margin-top: 50px;
     width: 100%;
     margin-bottom: 30px;
@@ -23,12 +23,12 @@ ul{
     margin: 0 4px;
 }
 
-.pagination a.active {
+.active a {
     background-color: #4CAF50;
     color: white;
     border: 1px solid #4CAF50;
 }
 
-.pagination a:hover:not(.active) {
+.page-item:hover:not(.active) a{
     background-color: #ddd;
 }
