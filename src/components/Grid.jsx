@@ -1,7 +1,8 @@
 import React from 'react'
 import Item from './Item'
 import Pagination from './Pagination'
-import "../grid.css";
+import "../grid.css"
+//import "../grid.css";
 
 const Grid = () => {
   return (
@@ -11,20 +12,6 @@ const Grid = () => {
             <button className="all">Todos</button>
         </div>
         <div className="grid-container">
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
-            <Item/>
             <Item/>
         </div>
         <Pagination/>
