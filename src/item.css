@@ -1,7 +1,7 @@
 .item-container{
     background-color: white;
     width: 250px;
-    height: 260px;
+    height: calc(100% + 20px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,6 +15,11 @@
 
 .item-container:hover{
     transform: scale(1.08);
+}
+
+.img-item{
+    width: 230px;
+    height: 200px;
 }
 
 .item-container img{

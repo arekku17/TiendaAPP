@@ -11,10 +11,10 @@ const Navbar = () => {
                 <a href="/login">Iniciar Sesión</a>
                 <a href="/register">Registrarse</a>
             </div>
-            <div class="search-container">
+            <div className="search-container">
                 <form action="/">
                     <input type="text" placeholder="Buscar.." name="search"/>
-                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <button type="submit"><i className="fa fa-search"></i></button>
                 </form>
             </div>
         </div>

@@ -8,7 +8,7 @@
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(auto-fill, 280px);
-    grid-gap: 20px;
+    grid-gap: 40px;
 }
 
 .grid-container div {
