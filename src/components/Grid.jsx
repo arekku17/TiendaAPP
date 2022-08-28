@@ -2,9 +2,14 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import Item from './Item'
 import Pagination from './Pagination'
+<<<<<<< HEAD
 import { trackPromise } from 'react-promise-tracker';
 import "../grid.css";
 import LoadingIndicator from './LoadingIndicator';
+=======
+import "../grid.css"
+//import "../grid.css";
+>>>>>>> 8ebfd86045ebbe75987b67e4abe0dc0ed1e3cad5
 
 const Grid = () => {
   const [items, setItems] = useState([]);
@@ -45,6 +50,7 @@ const Grid = () => {
           <button className="all">Todos</button>
         </div>
         <div className="grid-container">
+<<<<<<< HEAD
           {
             items
             .slice(page, page + itemsxPagina) //Filtro los primeros 20
@@ -52,6 +58,9 @@ const Grid = () => {
               <Item key={item._id} data={item}/>
             ))
           }
+=======
+            <Item/>
+>>>>>>> 8ebfd86045ebbe75987b67e4abe0dc0ed1e3cad5
         </div>
         <LoadingIndicator/> 
         <Pagination changePage={changePage} items={items} itemsPerPage={itemsxPagina}/>
