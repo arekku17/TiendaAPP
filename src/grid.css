@@ -1,0 +1,39 @@
+.body-grid{
+    width: 90%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.grid-container{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 280px);
+    grid-gap: 20px;
+}
+
+.grid-container div {
+    margin: auto;
+}
+
+.all{
+    margin-left: 1rem;
+}
+
+.options-container{
+    margin-bottom: 2rem;
+}
+
+.options-container button{
+    cursor: pointer;
+	outline: inherit;
+    border: none;
+	padding: 0;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.selected{
+    border-bottom: 3px solid rgb(255, 0, 0) !important;
+}
