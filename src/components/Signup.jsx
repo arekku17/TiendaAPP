@@ -25,28 +25,28 @@ const SignUp = () => {
                             <input type="text" placeholder='Nombre' className='form-input' {...register('nombre',{
                                 required: true,
                             })} />
-                            {errors.nombre?.type === 'required' && <p>El campo es requerido</p>}
+                            {errors.nombre?.type === 'required' && <p className='form-error'>* Campo requerido</p>}
                         </div>
 
                         <div className='form-goup'>
                             <input type="text" placeholder='Apellidos' className='form-input' {...register('apellidos',{
                                 required: true,
                             })} />
-                            {errors.apellidos?.type === 'required' && <p>El campo es requerido</p>}
+                            {errors.apellidos?.type === 'required' && <p className='form-error'>* Campo requerido</p>}
                         </div>
 
                         <div className='form-goup'>
                             <input type="text" placeholder='Fecha Nacimiento' className='form-input' {...register('nacimiento',{
                                 required: true,
                             })} />
-                            {errors.nacimiento?.type === 'required' && <p>El campo es requerido</p>}
+                            {errors.nacimiento?.type === 'required' && <p className='form-error'>* Campo requerido</p>}
                         </div>
 
                         <div className='form-goup'>
                             <input type="text" placeholder='Género' className='form-input' {...register('genero',{
                                 required: true,
                             })} />
-                            {errors.genero?.type === 'required' && <p>El campo es requerido</p>}
+                            {errors.genero?.type === 'required' && <p className='form-error'>* Campo requerido</p>}
                         </div>
 
                         <div className='form-goup'>
