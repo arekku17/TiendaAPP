@@ -5,11 +5,11 @@ const OptionsNavbar = () => {
   return (
     <div className="links-container">
                 
-                <Link to={'/login'} >
+                <Link to={'/signin'} >
                 <a >Iniciar Sesión</a>
                 </Link>
                 
-                <Link to={'/register'}>
+                <Link to={'/signup'}>
                 <a >Registrarse</a>
                 </Link>
 
