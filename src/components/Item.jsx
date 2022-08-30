@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 import '../item.css'
 
 const Item = ({ data }) => {
@@ -20,6 +21,9 @@ const Item = ({ data }) => {
         <div className="info-item">
           <p className="name-item">{data.product_name}</p>
           <p className="price">${data.price}</p>
+          <Link to={ `/products/${data._id}` }>
+          <button className='item-button'> detalles</button>
+          </Link>
         </div>
       </a>
     </div>

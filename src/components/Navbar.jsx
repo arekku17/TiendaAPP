@@ -1,4 +1,6 @@
 import React from 'react'
+import OptionsNavbar from './OptionsNavbar'
+
 
 const Navbar = () => {
   return (
@@ -7,10 +9,7 @@ const Navbar = () => {
             <h1>Tienda APP</h1>
         </div>
         <div className="right-container">
-            <div className="links-container">
-                <a href="/login">Iniciar Sesión</a>
-                <a href="/register">Registrarse</a>
-            </div>
+            <OptionsNavbar/>
             <div className="search-container">
                 <form action="/">
                     <input type="text" placeholder="Buscar.." name="search"/>
