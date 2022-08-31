@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { trackPromise } from 'react-promise-tracker';
 import Navbar from './Navbar' 
-import Item from './Item';
-import Grid from './Grid'
 import { 
     useParams,
     Link

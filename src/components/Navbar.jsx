@@ -1,6 +1,8 @@
 import React from 'react'
 import OptionsNavbar from './OptionsNavbar'
-
+import {
+    Link
+}   from "react-router-dom"
 
 const Navbar = () => {
   return (
@@ -12,8 +14,10 @@ const Navbar = () => {
             <OptionsNavbar/>
             <div className="search-container">
                 <form action="/">
-                    <input type="text" placeholder="Buscar.." name="search"/>
-                    <button type="submit"><i className="fa fa-search"></i></button>
+                    
+                        <input type="text" placeholder="Buscar.." name="search"/>
+                        <button type="submit"><i className="fa fa-search"></i></button>
+                    
                 </form>
             </div>
         </div>
