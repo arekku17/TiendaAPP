@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import '../item.css'
 
 const Item = ({ data }) => {
   return (
-    <div className="item-container">
+    <Link to={`/products/${data._id}`}>
+      <div className="item-container">
         <div className="img-item">
           <img src={data.image} alt={data.product_name} />
           <div className="hover-container">
@@ -20,11 +21,9 @@ const Item = ({ data }) => {
         <div className="info-item">
           <p className="name-item">{data.product_name}</p>
           <p className="price">${data.price}</p>
-          <Link to={ `/products/${data._id}` }>
-          <button className='item-button'> detalles</button>
-          </Link>
         </div>
-    </div>
+      </div>
+    </Link>
   )
 }
 
