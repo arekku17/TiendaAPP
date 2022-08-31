@@ -36,19 +36,19 @@ const SignIn = () => {
                         
                         <div className='form-goup'>
                             <label ></label>
-                            <input type="text" placeholder='Contraseña' className='form-input' {...register('password',{
+                            <input type="password" placeholder='Contraseña' className='form-input' {...register('password',{
                                 required: true,
-                                pattern:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{5,10}/
+                                minLength: 5
                             })}/>
                             {errors.password?.type === 'required' && <p className='form-error'>* Campo requerido</p>}
-                            {errors.password?.type === 'pattern' && <p className='form-error' >* Contraseña inválida</p>}
+                            {errors.password?.type === 'minLength' && <p className='form-error' >* Ingrese más de 5 caracteres</p>}
                         </div>
                         
 
                        <input type="submit" value="ENTRAR"  className='form-submit'/>
                        <p className='form-text' > 
                             <br/>
-                            <a href="" className='form-link'>¿No tienes una cuenta?
+                            <a href="/signup" className='form-link'>¿No tienes una cuenta?
                                 <br/>
                             </a>
                         </p> 

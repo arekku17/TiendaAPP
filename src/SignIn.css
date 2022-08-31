@@ -1,18 +1,20 @@
-.body{
+.body {
     margin: 0;
     padding: 0;
 }
-.right-signin-section{
+
+.right-signin-section {
     background: rgb(229, 229, 233);
     height: 100vh;
     width: 50%;
     display: flex;
-    
-    
+
+
 }
 
-.left-signin-section{ /**/
-    background: url("./imgs/carrito.JPG");
+.left-signin-section {
+    /**/
+    background: url("./imgs/carrito.svg");
     background-size: cover;
     background-position: center;
     width: 50%;
@@ -20,33 +22,32 @@
 
 }
 
-.signin-section{
-    display: flex;    
-
-
+.signin-section {
+    display: flex;
 }
 
 
-.span-signing{
+
+.span-signing {
     color: rgb(185, 197, 204);
 }
 
 
-.right-signin-section h1{
+.right-signin-section h1 {
     font-size: 30px;
     width: 50%;
-    margin:auto;
+    margin: auto;
     margin-left: 80px;
 }
 
-.right-signin-section p{
+.right-signin-section p {
     font-size: 20px;
     line-height: 30px;
     width: 50%;
     margin: auto;
 }
 
-.right-signin-section h3{
+.right-signin-section h3 {
     font-size: 20px;
     line-height: 30px;
     width: 50%;
@@ -55,7 +56,7 @@
 }
 
 /*puede ser para un boton */
-.link-signin a{
+.link-signin a {
     border: 2px solid white;
     padding: 20px;
     text-decoration: none;
@@ -65,82 +66,85 @@
     display: inline-block;
     margin-top: 30px;
 }
-.link-signin{
+
+.link-signin {
     text-align: center;
 }
 
-.form-signin{
+.form-signin {
     background-color: #FFF;
     margin: auto;
     width: 90%;
     max-width: 400px;
     padding: 4.em 3em;
     border-radius: 10px;
-    box-shadow: 0 5px 10px -5px rgb( 0 0 0 /30%);
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 /30%);
     text-align: center;
 }
 
-.form-title1{
+.form-title1 {
     font-weight: 300;
     margin-bottom: .5em;
 }
 
-.form-title2{
+.form-title2 {
     font-size: 2rem;
     margin-bottom: .5em;
 }
 
-.form-title3{
+.form-title3 {
     font-size: 1rem;
     margin-bottom: .5em;
 }
 
-.form-error{
+.form-error {
     font-size: xx-small;
     margin-top: 10px;
-   background: rgb(235, 187, 187);
+    background: rgb(235, 187, 187);
     font-weight: 300;
-    border-radius: 30px;
+    border-radius: 20px;
+    padding: 5px 2px;
     color: rgb(20, 20, 20);
 }
 
-.form-button{
-   
-        border  : none;
-        padding : 0 10px;
-        margin  : 10px;
-        width   : 20%;
-        background : none;
-        border: 1px solid black;
-        border-radius: 30px;
-        background: rgb(132, 196, 238);
-      
+.form-button {
+    border: none;
+    padding: 0 10px;
+    margin: 10px;
+    width: 20%;
+    background: none;
+    border: 1px solid black;
+    border-radius: 30px;
+    background: rgb(132, 196, 238);
+
 }
 
-.form-text{
+.form-text {
     font-weight: 300;
 }
 
-.form-link{
+.form-link {
     font-weight: 400;
     color: black;
 }
 
-.form-group{
+.form-group {
     position: relative;
     --color: #5757577e;
 }
 
-.form-input{
-    
+.form-input {
     margin-top: 20px;
-    border: 1px solid rgb(177, 174, 174);
-    outline: 1px solid rgb(177, 174, 174);
+    border: 1px solid rgb(177, 174, 174) !important;
+    outline: 1px solid rgb(177, 174, 174) !important;
     border-radius: 10px;
-    
+    width: 50%;
+    font-size: 1rem;
+    padding: 10px !important;
+
 }
-*
-.form-submit{
+
+* .form-submit {
     margin-top: 20px;
     margin-bottom: 10px;
     text-align: center;
@@ -155,7 +159,7 @@
     border-radius: .5em;
 }
 
-.form-line{
+.form-line {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -164,7 +168,7 @@
     background-color: #3866F2;
 }
 
-.form-button-register{
+.form-button-register {
     text-decoration: none;
     font-weight: 600;
     font-size: 15px;
@@ -178,5 +182,9 @@
     border-width: 3PX;
     border-style: solid;
     border-radius: 35px;
-    margin:10px;
+    margin: 10px;
+}
+
+.form-error{
+    margin-top: 20px !important;
 }

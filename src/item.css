@@ -80,3 +80,7 @@
     border-radius: 35px;
     margin:10px;
 }
+
+button{
+    cursor: pointer;
+}
