@@ -6,7 +6,8 @@ import './index.css'
 import  {
   BrowserRouter,
   Routes,
-  Route
+  Route,
+  Navigate
 } from "react-router-dom";
 import SignIn from './components/SignIn'
 import Signup from './components/Signup'
@@ -15,7 +16,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-      
+        <Route path="/" element={<Navigate to="/home" />}/>
         <Route path='/home' element={<App/>} />
         <Route path='/products/:id' element={<Products/>} />
         {/*<Route path='/products' element={<Products/>} />*/}

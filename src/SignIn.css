@@ -80,9 +80,11 @@
     border-radius: 10px;
     box-shadow: 0 5px 10px -5px rgb(0 0 0 /30%);
     text-align: center;
+    position: relative;
 }
 
 .form-title1 {
+    margin-top: 1rem !important;
     font-weight: 300;
     margin-bottom: .5em;
 }
@@ -187,4 +189,21 @@
 
 .form-error{
     margin-top: 20px !important;
+}
+
+.lbl{
+    padding-top: 10px !important;
+}
+
+.fa-solid{
+    font-size: 2rem;
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    cursor: pointer;
+}
+
+.form-radio{
+    margin-top: 20px;
+    margin-left: 10px;
 }
