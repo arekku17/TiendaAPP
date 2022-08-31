@@ -6,7 +6,6 @@ import '../item.css'
 const Item = ({ data }) => {
   return (
     <div className="item-container">
-      <a href="" className="link-item">
         <div className="img-item">
           <img src={data.image} alt={data.product_name} />
           <div className="hover-container">
@@ -25,7 +24,6 @@ const Item = ({ data }) => {
           <button className='item-button'> detalles</button>
           </Link>
         </div>
-      </a>
     </div>
   )
 }

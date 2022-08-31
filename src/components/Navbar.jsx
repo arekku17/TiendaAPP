@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import OptionsNavbar from './OptionsNavbar'
 import {
     Link
@@ -7,9 +8,11 @@ import {
 const Navbar = () => {
   return (
     <div className='nav'>
+        <Link to={'/home'} >
         <div className="title-container">
             <h1>Tienda APP</h1>
         </div>
+        </Link>
         <div className="right-container">
             <OptionsNavbar/>
             <div className="search-container">

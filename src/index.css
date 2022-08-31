@@ -83,3 +83,7 @@ input[type=text] {
 .topnav .search-container button:hover {
   background: #ccc;
 }
+
+input{
+  cursor: pointer;
+}
