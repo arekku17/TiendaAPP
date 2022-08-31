@@ -62,11 +62,11 @@ const SignUp = () => {
                         <div className='form-goup'>
                             <input type="password" placeholder='Contraseña' className='form-input' {...register('password',{
                                 required: true,
-                                maxLength: 5
+                                minLength: 5
                             })}/>
                             {errors.password?.type === 'required' && <p className='form-error'>* Campo requerido</p>}
-                            {errors.password?.type === 'maxLength' && <p className='form-error' >* Debe tener al menos 5 caracteres</p>}
-                        </div>
+                            {errors.password?.type === 'minLength' && <p className='form-error' >* Ingrese más de 5 caracteres</p>}
+                            </div>
 
                         <input type="submit" value="REGISTRARSE"  className='form-submit'/>
 
