@@ -60,12 +60,12 @@ const SignUp = () => {
                         </div>
                         
                         <div className='form-goup'>
-                            <input type="text" placeholder='Contraseña' className='form-input' {...register('password',{
+                            <input type="password" placeholder='Contraseña' className='form-input' {...register('password',{
                                 required: true,
-                                pattern:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{5,10}/
+                                maxLength: 5
                             })}/>
                             {errors.password?.type === 'required' && <p className='form-error'>* Campo requerido</p>}
-                            {errors.password?.type === 'pattern' && <p className='form-error' >* Contraseña inválida</p>}
+                            {errors.password?.type === 'maxLength' && <p className='form-error' >* Debe tener al menos 5 caracteres</p>}
                         </div>
 
                         <input type="submit" value="REGISTRARSE"  className='form-submit'/>
