@@ -87,3 +87,33 @@ input[type=text] {
 input{
   cursor: pointer;
 }
+
+.menu-toggle{
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 850px) {
+  .menu-toggle{
+    visibility: visible;
+    font-size: 2rem;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+  
+  .right-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #333333;
+    position: fixed;
+    width: 0;
+    height: 100px;
+    top:60px ;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+  }
+
+  .showMenu{
+    width: 100%;
+  }
+}

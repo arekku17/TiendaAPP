@@ -63,7 +63,7 @@ const SignUp = () => {
                     </div>
 
                     <div className='form-goup'>
-                        <div className='lbl'>Fecha de Nacimiento <br></br></div>
+                        <div className='lbl'>Fecha de Nacimiento</div>
                         <input type="date" placeholder='Fecha Nacimiento' className='form-input' {...register('nacimiento', {
                             required: true,
                         })} />
@@ -71,16 +71,16 @@ const SignUp = () => {
                     </div>
 
                     <div className='form-goup'>
-                    <div className='lbl'>Género <br></br></div>
+                    <div className='lbl'>Género</div>
                         <input type="radio" name='genero' value={"M"} placeholder='Género' className='form-radio' {...register('genero', {
                             required: true,
-                        })} /> M
+                        })} /> Masculino
                         <input type="radio" name='genero' value={"F"} placeholder='Género' className='form-radio' {...register('genero', {
                             required: true,
-                        })} /> F
+                        })} /> Femenino
                         <input type="radio" name='genero' value={"X"} placeholder='Género' className='form-radio' {...register('genero', {
                             required: true,
-                        })} /> Z
+                        })} /> Otro
                         {errors.genero?.type === 'required' && <p className='form-error'>* Campo requerido</p>}
                     </div>
 
