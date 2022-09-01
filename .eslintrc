@@ -1,0 +1,20 @@
+/* eslint-disable strict */
+module.exports = {
+    env: {
+      browser: false, // NODE
+      commonjs: true,
+      es2021: true
+    },
+    extends: 'airbnb-base/legacy', //instalar "eslint-config-airbnb-base"
+                                   //"eslint-plugin-import"
+
+    parserOptions: {
+      ecmaVersion: 'latest'
+    },
+    rules: { //indicacion de reglas, comillas simples, espacios, tab, nombre de archivos
+      semi: [1, 'always']
+      
+    }
+  
+  };
+  

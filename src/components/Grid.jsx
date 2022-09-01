@@ -6,12 +6,14 @@ import { trackPromise } from 'react-promise-tracker';
 import "../grid.css";
 import LoadingIndicator from './LoadingIndicator';
 
-const Grid = () => {
+const Grid = ({search}) => {
   const [items, setItems] = useState([]);
   const [page, setPage] = useState(0);
   const [option, setOption] = useState("all");
   const [dataItem, setData] = useState([]);
   const [itemsxPagina, setItemsxPagina] = useState(20);
+
+  const filter = items.filter((dato) =>  dato.product_name.toLowerCase().includes(search.toLocaleLowerCase()))
 
   useEffect(() => {
     trackPromise(
@@ -77,10 +79,21 @@ const Grid = () => {
         </div>
         <div className="grid-container">
           {
-            items.slice(page, page + itemsxPagina) //Filtro los primeros 20
+            
+            /*items.slice(page, page + itemsxPagina) //Filtro los primeros 20
             .map(item => (
               <Item key={item._id} data={item} />
-            ))
+            ))*/
+            
+
+            !search ?items.slice(page, page + itemsxPagina)
+            .map(item => (
+              <Item key={item._id} data={item} />
+            )) : filter.map(item => (
+              <Item key={item._id} data={item} />
+            )) 
+            
+
           }
         </div>
         <LoadingIndicator />
