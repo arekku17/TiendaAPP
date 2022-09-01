@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import "../SignIn.css";
 import {
@@ -9,6 +9,11 @@ import axios from "axios";
 const SignIn = () => {
 
     const { register, formState: { errors }, handleSubmit } = useForm();
+
+    useEffect(() => {
+        document.title = "Tienda APP - Iniciar Sesión";
+    }, []);
+
     const onSubmit = (data) => {
         console.log(data);
         postLogin(data);

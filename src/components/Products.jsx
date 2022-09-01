@@ -16,7 +16,7 @@ const Products = () => {
     useEffect(() => {
         trackPromise(
             getProduct().then(product => {
-                console.log(product);
+                document.title = `Tienda APP - ${product.product_name}`;
                 setProduct(product);
 
             })
