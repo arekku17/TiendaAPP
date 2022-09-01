@@ -88,7 +88,6 @@ const Grid = () => {
           // Se va mostrar la paginación solo si se elige la opción de Todos los Productos
           option == "all" ? <Pagination changePage={changePage} items={items} itemsPerPage={itemsxPagina} /> : ""
         }
-        
       </div>
     </>
   )
