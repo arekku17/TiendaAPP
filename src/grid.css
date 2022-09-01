@@ -37,3 +37,12 @@
 .selected{
     border-bottom: 3px solid rgb(255, 0, 0) !important;
 }
+
+@media only screen and (max-width: 850px) {
+    .grid-container{
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 200px);
+        grid-gap: 20px;
+    }
+}

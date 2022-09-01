@@ -15,7 +15,7 @@
 
 .img-product img{
     border-radius: 20px;
-    width: 100%;
+    width: 90%;
     
 }
 
@@ -80,7 +80,7 @@
     font-weight: 700;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
     .product{
         flex-direction: column-reverse;
         width: 90vw;
@@ -89,6 +89,7 @@
 
     .img-product{
         width: 100%;
+        margin-bottom: 2rem;
     }
 
     .product-info{

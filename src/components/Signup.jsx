@@ -1,12 +1,16 @@
 import axios from "axios";
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import "../SignIn.css";
 
 const SignUp = () => {
 
     const { register, formState: { errors }, handleSubmit } = useForm();
+    const [ errorPost, setErrorPost ] = useState("");
+    const navigate = useNavigate();
+
     const onSubmit = (data) => {
         postRegister(data);
     };
@@ -23,11 +27,22 @@ const SignUp = () => {
             password: data.password
         };
         axios.post(url, sortData)
-            .then(response => console.log(response))
+            .then(() => {
+                setErrorPost("");
+                Swal.fire({
+                    icon: "success",
+                    title: "Registro Exitoso",
+                    text: "Cuenta registrada exitosamente",
+                }).then(() => {
+                    navigate("/signin");
+                });
+                
+            })
             .catch((error) => {
                 if (error.response) {
                     // La respuesta fue hecha y el servidor respondió con un código de estado
-                    console.log(error.response.data.message);
+                    if (error.response.data.error.code == 11000) setErrorPost("Ya existe una cuenta con este correo");
+                    else setErrorPost("Ocurrió un error al registrar");
                 }
             });
     };
@@ -102,11 +117,10 @@ const SignUp = () => {
                     </div>
 
                     <input type="submit" value="REGISTRARSE" className='form-submit' />
-
+                    {errorPost? <p className='form-error'>{errorPost}</p> : ""}
+                    <br />
 
                 </form>
-
-
 
             </div>
 
