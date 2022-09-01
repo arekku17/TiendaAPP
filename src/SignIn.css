@@ -7,8 +7,21 @@
     height: 100vh;
     width: 50%;
     display: flex;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.5s;
+    animation-name: opacityAnim;
 
+}
 
+@keyframes opacityAnim {
+    from {
+      
+        opacity: 0;
+      }
+    
+      to {
+        opacity: 1;
+      }
 }
 
 .left-signin-section {
@@ -18,7 +31,22 @@
     background-position: center;
     width: 50%;
     height: 100vh;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.5s;
+    animation-name: slidein-right
 
+}
+
+@keyframes slidein-right {
+    from {
+      
+      width: 0;
+    }
+  
+    to {
+      margin-right: 0%;
+      width: 50%;
+    }
 }
 
 .signin-section {
@@ -158,6 +186,11 @@
     padding: .8rem 0;
     border: none;
     border-radius: .5em;
+    transition: all .3s ease-in-out;
+}
+
+.form-submit:hover {
+    background: #0e3dc9;
 }
 
 .form-line {
@@ -174,16 +207,18 @@
     font-weight: 600;
     font-size: 15px;
     color: #333333;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     padding-left: 40px;
     padding-right: 40px;
-    background-color: #b9dde9;
-    border-color: #D8D8D8;
-    border-width: 3PX;
-    border-style: solid;
-    border-radius: 35px;
+    background-color: #ff8e72;
+    border: none;
+    border-radius: 15px;
     margin: 10px;
+}
+
+.form-button-register:hover{
+    background-color: #ff714e;
 }
 
 .form-error{
@@ -200,6 +235,11 @@
     right: 2rem;
     top: 1rem;
     cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.fa-solid:hover {
+    transform: scale(1.1);
 }
 
 .form-radio{
@@ -223,5 +263,15 @@
     .left-signin-section{
         width: 100%;
         height: 500px;
+    }
+
+    @keyframes slidein-right {
+        from {
+          width: 0;
+        }
+      
+        to {
+          width: 100%;
+        }
     }
 }
