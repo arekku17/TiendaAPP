@@ -80,12 +80,6 @@ const Grid = ({search}) => {
         <div className="grid-container">
           {
             
-            /*items.slice(page, page + itemsxPagina) //Filtro los primeros 20
-            .map(item => (
-              <Item key={item._id} data={item} />
-            ))*/
-            
-
             !search ?items.slice(page, page + itemsxPagina)
             .map(item => (
               <Item key={item._id} data={item} />
