@@ -1,10 +1,10 @@
-import React from 'react'
-import { useForm } from "react-hook-form"
-import "../SignIn.css"
+import React from "react";
+import { useForm } from "react-hook-form";
+import "../SignIn.css";
 import {
     Link
-} from "react-router-dom"
-import axios from 'axios'
+} from "react-router-dom";
+import axios from "axios";
 
 const SignIn = () => {
 
@@ -12,10 +12,10 @@ const SignIn = () => {
     const onSubmit = (data) => {
         console.log(data);
         postLogin(data);
-    }
+    };
 
     const postLogin = (data) => {
-        const url = "https://ecomerce-master.herokuapp.com/api/v1/login"
+        const url = "https://ecomerce-master.herokuapp.com/api/v1/login";
         axios.post(url, data)
             .then(response => console.log(response))
             .catch((error) => {
@@ -24,8 +24,7 @@ const SignIn = () => {
                     console.log(error.response.data.message);
                 }
             });
-        ;
-    }
+    };
     
     return (
         <div className='signin-section'>
@@ -35,7 +34,7 @@ const SignIn = () => {
             <div className='right-signin-section'>
 
                 <form onSubmit={handleSubmit(onSubmit)} className="form-signin">
-                    <Link to={`/home`}>
+                    <Link to={"/home"}>
                         <i className="fa-solid fa-house"></i>
                     </Link>
                     <h3 className='form-title1' >¡Hola!</h3>
@@ -43,22 +42,22 @@ const SignIn = () => {
                     <h4 className='form-title3' >Iniciar Sesión</h4>
 
                     <div className='form-goup'>
-                        <input type="text" placeholder='Correo' className='form-input' {...register('email', {
+                        <input type="text" placeholder='Correo' className='form-input' {...register("email", {
                             required: true,
                             pattern: /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i
                         })} />
-                        {errors.email?.type === 'required' && <p className='form-error'>* Campo requerido</p>}
-                        {errors.email?.type === 'pattern' && <p className='form-error'>* Formato incorrecto</p>}
+                        {errors.email?.type === "required" && <p className='form-error'>* Campo requerido</p>}
+                        {errors.email?.type === "pattern" && <p className='form-error'>* Formato incorrecto</p>}
                     </div>
 
                     <div className='form-goup'>
                         <label ></label>
-                        <input type="password" placeholder='Contraseña' className='form-input' {...register('password', {
+                        <input type="password" placeholder='Contraseña' className='form-input' {...register("password", {
                             required: true,
                             minLength: 5
                         })} />
-                        {errors.password?.type === 'required' && <p className='form-error'>* Campo requerido</p>}
-                        {errors.password?.type === 'minLength' && <p className='form-error' >* Ingrese más de 5 caracteres</p>}
+                        {errors.password?.type === "required" && <p className='form-error'>* Campo requerido</p>}
+                        {errors.password?.type === "minLength" && <p className='form-error' >* Ingrese más de 5 caracteres</p>}
                     </div>
 
 
@@ -69,7 +68,7 @@ const SignIn = () => {
                             <br />
                         </a>
                     </p>
-                    <Link to={'/signup'}>
+                    <Link to={"/signup"}>
                         <button className='form-button-register'>REGISTRARME</button>
                     </Link>
                 </form>
@@ -80,7 +79,7 @@ const SignIn = () => {
 
 
         </div>
-    )
-}
+    );
+};
 
-export default SignIn
+export default SignIn;

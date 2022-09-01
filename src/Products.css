@@ -75,6 +75,11 @@
 	top:1px;
 }
 
+.product-inactive{
+    color: #ff3392;
+    font-weight: 700;
+}
+
 @media only screen and (max-width: 800px) {
     .product{
         flex-direction: column-reverse;
