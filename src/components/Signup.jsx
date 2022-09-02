@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -11,6 +11,10 @@ const SignUp = () => {
     const [ errorPost, setErrorPost ] = useState("");
     const navigate = useNavigate();
 
+    useEffect(() => {
+        document.title = "Tienda APP - Registro";
+    }, []);
+    
     const onSubmit = (data) => {
         postRegister(data);
     };
