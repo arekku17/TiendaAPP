@@ -83,11 +83,9 @@ const Grid = ({search}) => {
                     {
             
                         !search ?items.slice(page, page + itemsxPagina)
-                             {/** Despliegue productos en grupos de 20 */}
                             .map(item => (
                                 <Item key={item._id} data={item} />
                             )) : filter.slice(page, page + itemsxPagina)
-                            {/** Despliegue de busqueda de Productos en Input */}
                             .map(item => (
                                 <Item key={item._id} data={item} />
                             )) 
