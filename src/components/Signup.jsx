@@ -10,9 +10,10 @@ const SignUp = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [ errorPost, setErrorPost ] = useState("");
     const navigate = useNavigate();
-
+    const token = localStorage.getItem("token");
     useEffect(() => {
         document.title = "Tienda APP - Registro";
+        if (token) window.location.href = '/';
     }, []);
     
     const onSubmit = (data) => {

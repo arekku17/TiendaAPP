@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import "../SignIn.css";
 import {
@@ -9,24 +9,29 @@ import axios from "axios";
 const SignIn = () => {
 
     const { register, formState: { errors }, handleSubmit } = useForm();
-
+    const [ errorPost, setErrorPost ] = useState("");
+    const token = localStorage.getItem("token");
+    
     useEffect(() => {
         document.title = "Tienda APP - Iniciar Sesión";
+        if (token) window.location.href = '/';
     }, []);
 
     const onSubmit = (data) => {
-        console.log(data);
         postLogin(data);
     };
 
     const postLogin = (data) => {
         const url = "https://ecomerce-master.herokuapp.com/api/v1/login";
         axios.post(url, data)
-            .then(response => console.log(response))
+            .then(response => {
+                localStorage.setItem("token", response.data.token);
+                window.location.href = '/';
+            })
             .catch((error) => {
                 if (error.response) {
                     // La respuesta fue hecha y el servidor respondió con un código de estado
-                    console.log(error.response.data.message);
+                    setErrorPost("Correo o Contraseña incorrecta");
                 }
             });
     };
@@ -67,6 +72,8 @@ const SignIn = () => {
 
 
                     <input type="submit" value="ENTRAR" className='form-submit' />
+                    {errorPost? <p className='form-error'>{errorPost}</p> : ""}
+
                     <p className='form-text' >
                         <br />
                         <a href="/signup" className='form-link'>¿No tienes una cuenta?

@@ -13,6 +13,8 @@ const Products = () => {
     const [product, setProduct] = useState(0);
     const params = useParams();
 
+    const token = localStorage.getItem("token");
+
     useEffect(() => {
         trackPromise(
             getProduct().then(product => {
@@ -56,7 +58,10 @@ const Products = () => {
                     <p className='product-cat'><span className='bold'>Categoria: </span> <br /> {product.category}</p>
                     <p className='product-stock'><span className='bold'>Stock: </span> <br /> {product.isActive === true ? "Activo" : "Inactivo"} </p>
                     {
+                        token ?
                         product.isActive === true ? <button className='product-button active' onClick={() => buyProduct(product.product_name)}>Comprar</button> : <p className='product-inactive'>No hay producto</p>
+                        :
+                        <button className='product-button active' onClick={() => window.location.href = '/signin'}>Iniciar Sesión para comprar</button>
                     }
                 </div>
                 <div className="img-product">
