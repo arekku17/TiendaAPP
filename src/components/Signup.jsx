@@ -14,6 +14,7 @@ const SignUp = () => {
     useEffect(() => {
         document.title = "Tienda APP - Registro";
         if (token) window.location.href = '/';
+        
     }, []);
     
     const onSubmit = (data) => {
